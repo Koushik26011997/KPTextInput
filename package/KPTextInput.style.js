@@ -9,10 +9,16 @@ export default StyleSheet.create({
         fontSize: 13
     },
     textInputStyle: {
-        fontSize: 14,
-        height: 48, fontSize: 14,
+        fontSize: 16,
+        height: 48,
         borderWidth: 1, borderRadius: 6,
         marginTop: 12, borderColor: "#000",
-        paddingHorizontal: 12, fontWeight: 'bold',
-    }
+        paddingHorizontal: 12
+    },
+    searchIcon: {
+        position: 'absolute',
+        right: 18,
+        top: 24,
+    },
+    iconStyle: { width: 24, height: 24, resizeMode: 'contain' }
 });
