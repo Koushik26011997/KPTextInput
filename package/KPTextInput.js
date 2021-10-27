@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { StyleSheet, Text, View, Animated, PixelRatio, TextInput } from 'react-native';
+import React from "react";
+import { Text, View, TextInput } from 'react-native';
 
 import styles from "./KPTextInput.style.js";
 
@@ -8,16 +8,24 @@ const KPTextInput = ({
     onChangeText = () => { },
     onBlur = () => { },
     textboxvalue = '',
-    secureTextEntry = false,
+    isPassword = false,
     keyboardType = 'default',
     textboxStyle = {},
     autoFocus = true,
     multiline = false,
     numberOfLines = 1,
     editable = true,
-    // Label Props Start Here
+    maxLength = 100,
+    allowFontScaling = true,
+    placeholderTextColor = "gray",
+    /////////////////////////////
+    // Label Props Starts Here //
+    /////////////////////////////
     labelplaceholder = "",
     customlabelStyle = {},
+    labelBackgroundColor = '#fff',
+    labelTextColor = '#000',
+    ishowLabel = true
 }) => {
     return (
         <View>
@@ -27,7 +35,7 @@ const KPTextInput = ({
                 placeholder={textboxplaceholder}
                 onBlur={onBlur}
                 value={textboxvalue}
-                secureTextEntry={secureTextEntry}
+                secureTextEntry={isPassword}
                 onChangeText={onChangeText}
                 keyboardType={keyboardType}
                 autoCapitalize="none"
@@ -35,13 +43,16 @@ const KPTextInput = ({
                 multiline={multiline}
                 numberOfLines={numberOfLines}
                 editable={editable}
+                maxLength={maxLength}
+                allowFontScaling={allowFontScaling}
+                placeholderTextColor={placeholderTextColor}
             />
-            <Text
-                style={[styles.placeholderText, customlabelStyle]}>
+            {ishowLabel && <Text
+                style={[styles.placeholderText, customlabelStyle, { backgroundColor: labelBackgroundColor, color: labelTextColor }]}>
                 {labelplaceholder}
-            </Text>
+            </Text>}
         </View>
     )
 }
 
-export default KPTextInput;
+export { KPTextInput };
