@@ -1,6 +1,6 @@
 {
   "name": "@iamkoushik/kp-textinput",
-  "version": "1.0.15",
+  "version": "1.0.18",
   "description": "This is a simple TextInput",
   "main": "index.js",
   "directories": {
