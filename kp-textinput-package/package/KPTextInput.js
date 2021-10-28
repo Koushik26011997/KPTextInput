@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, TextInput, Image } from 'react-native';
+import { Text, View, TextInput, Image, TouchableOpacity } from 'react-native';
 
 import styles from "./KPTextInput.style.js";
 
@@ -18,7 +18,7 @@ const KPTextInput = ({
     maxLength = 100,
     allowFontScaling = true,
     placeholderTextColor = "gray",
-    showPassword = true,
+    showPassword = isPassword ? true : false,
     /////////////////////////////
     // Label Props Starts Here //
     /////////////////////////////
@@ -33,11 +33,11 @@ const KPTextInput = ({
         <View>
             <TextInput
                 autoFocus={autoFocus}
-                style={[styles.textInputStyle, textboxStyle, { paddingRight: isPassword ? 20 : 0 }]}
+                style={[styles.textInputStyle, textboxStyle, { paddingRight: isPassword ? 48 : 12, backgroundColor: !editable ? '#f1f1f1' : null }]}
                 placeholder={textboxplaceholder}
                 onBlur={onBlur}
                 value={textboxvalue}
-                secureTextEntry={isPassword}
+                secureTextEntry={show}
                 onChangeText={onChangeText}
                 keyboardType={keyboardType}
                 autoCapitalize="none"
@@ -69,3 +69,4 @@ const KPTextInput = ({
 }
 
 export default KPTextInput;
+
