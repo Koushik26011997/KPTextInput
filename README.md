@@ -15,12 +15,21 @@ Features
 ![Image2](https://raw.githubusercontent.com/Koushik26011997/KPTextInput/koushik/kp-textinput-package/images/image2.png)
 
 
-### Installation
-``npm i @iamkoushik/kp-textinput --save``
+## Getting started
+Install the library using either Yarn:
 
-or
 
-``yarn add npm i @iamkoushik/kp-textinput``
+```
+npm i @iamkoushik/kp-textinput
+```
+
+or yarn:
+
+
+```
+yarn add @iamkoushik/kp-textinput
+```
+
 
 ### Usage
 ```javascript
