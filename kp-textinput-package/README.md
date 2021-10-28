@@ -10,7 +10,9 @@ Features
   - Supports Label Text as TextInput Label
 
 
-![Image](https://raw.githubusercontent.com/Koushik26011997/KPTextInput/koushik/images/image.png)
+![Image1](https://raw.githubusercontent.com/Koushik26011997/KPTextInput/koushik/images/image1.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+![Image1](https://raw.githubusercontent.com/Koushik26011997/KPTextInput/koushik/images/image2.png)
 
 ### Installation
 ``npm i @iamkoushik/kp-textinput --save``
@@ -30,7 +32,7 @@ const [value, setValue] = useState('');
   return (
     <View>
       <KPTextInput
-            style={{ height: 48, fontSize: 14, marginTop: 12 }}
+            textboxStyle={{ height: 48, fontSize: 14, marginTop: 12 }}
             placeholder="Email Address"
             textboxvalue={value}
             type={"email-address"}
@@ -41,7 +43,7 @@ const [value, setValue] = useState('');
           />
 
           <KPTextInput
-            style={{ height: 48, fontSize: 14, marginTop: 12 }}
+            textboxStyle={{ height: 48, fontSize: 14, marginTop: 12 }}
             placeholder="Email Address"
             textboxvalue={value}
             type={"email-address"}
@@ -52,7 +54,7 @@ const [value, setValue] = useState('');
           />
 
           <KPTextInput
-            style={{ height: 48, fontSize: 14, marginTop: 12 }}
+            textboxStyle={{ height: 48, fontSize: 14, marginTop: 12 }}
             placeholder="Password"
             textboxvalue={value}
             type={"email-address"}
@@ -66,6 +68,20 @@ const [value, setValue] = useState('');
   )
 }
 ```
+
+### Properties
+
+| Name | Type | Description | Default
+| ------------ | ------------- | ------------ |------------ |
+| `textboxStyle` | Object  | Custom styling | {}
+| ```textboxvalue``` | String  | value of the textinput | ''
+| ```isPassword``` | Boolean  | To show as Password | false
+| ```isShowLabel``` | Boolean  | To show the label | false
+| ```showPassword``` | Boolean  | To show the eye-icon | false
+| `onChangeText` | Function (value: String) | Function called when user start typing | null
+| `labelBackgroundColor` | String | Background color of the Label text | "#fff" 
+| `labelTextColor` | String | Text color of the Label | "#000" 
+
 
 ### Contributing
 

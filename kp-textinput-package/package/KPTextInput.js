@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import { Text, View, TextInput, Image } from 'react-native';
 
 import styles from "./KPTextInput.style.js";
