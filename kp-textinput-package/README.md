@@ -10,9 +10,10 @@ Features
   - Supports Label Text as TextInput Label
 
 
-![Image1](https://raw.githubusercontent.com/Koushik26011997/KPTextInput/koushik/images/image1.png)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-![Image1](https://raw.githubusercontent.com/Koushik26011997/KPTextInput/koushik/images/image2.png)
+![Image1](https://raw.githubusercontent.com/Koushik26011997/KPTextInput/koushik/kp-textinput-package/images/image1.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+![Image2](https://raw.githubusercontent.com/Koushik26011997/KPTextInput/koushik/kp-textinput-package/images/image2.png)
+
 
 ### Installation
 ``npm i @iamkoushik/kp-textinput --save``
@@ -50,6 +51,7 @@ const [value, setValue] = useState('');
             isPassword={false}
             onChangeText={(value) => setValue(value)}
             keyboardType={"default"}
+            editable={false} // Can't edit now
             isShowLabel={false} // Not to show the label text
           />
 
@@ -78,6 +80,7 @@ const [value, setValue] = useState('');
 | ```isPassword``` | Boolean  | To show as Password | false
 | ```isShowLabel``` | Boolean  | To show the label | false
 | ```showPassword``` | Boolean  | To show the eye-icon | false
+| ```editable``` | Boolean  | To restrict the edit mode | false
 | `onChangeText` | Function (value: String) | Function called when user start typing | null
 | `labelBackgroundColor` | String | Background color of the Label text | "#fff" 
 | `labelTextColor` | String | Text color of the Label | "#000" 
