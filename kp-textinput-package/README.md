@@ -9,10 +9,10 @@ Features
   - Supports Password show/hide
   - Supports Label Text as TextInput Label
 
-
-![Image1](https://raw.githubusercontent.com/Koushik26011997/KPTextInput/kp-textinput-package/koushik/images/image1.png)
+Koushik26011997/KPTextInput/tree/koushik/kp-textinput-package/images
+![Image1](https://raw.githubusercontent.com/Koushik26011997/KPTextInput/koushik/kp-textinput-package/images/image1.png)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-![Image1](https://raw.githubusercontent.com/Koushik26011997/KPTextInput/kp-textinput-package/koushik/images/image2.png)
+![Image2]((https://raw.githubusercontent.com/Koushik26011997/KPTextInput/koushik/kp-textinput-package/images/image2.png)
 
 ### Installation
 ``npm i @iamkoushik/kp-textinput --save``
