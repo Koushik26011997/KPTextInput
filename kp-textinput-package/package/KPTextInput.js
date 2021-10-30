@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, TextInput, Image, TouchableOpacity } from 'react-native';
-
+import { Text, View, TextInput, Image, Pressable } from 'react-native';
 import styles from "./KPTextInput.style.js";
 
 const KPTextInput = ({
@@ -11,7 +10,7 @@ const KPTextInput = ({
     isPassword = false,
     keyboardType = 'default',
     textboxStyle = {},
-    autoFocus = true,
+    autoFocus = false,
     multiline = false,
     numberOfLines = 1,
     editable = true,
@@ -19,6 +18,7 @@ const KPTextInput = ({
     allowFontScaling = true,
     placeholderTextColor = "gray",
     showPassword = isPassword ? true : false,
+    textAlignVertical = "auto",
     /////////////////////////////
     // Label Props Starts Here //
     /////////////////////////////
@@ -42,6 +42,7 @@ const KPTextInput = ({
                 keyboardType={keyboardType}
                 autoCapitalize="none"
                 autoCorrect={false}
+                textAlignVertical={multiline ? textAlignVertical : 'auto'}
                 multiline={multiline}
                 numberOfLines={numberOfLines}
                 editable={editable}
@@ -50,7 +51,7 @@ const KPTextInput = ({
                 placeholderTextColor={placeholderTextColor}
             />
             {showPassword ? (
-                <TouchableOpacity
+                <Pressable
                     style={styles.searchIcon}
                     onPress={() => setShow(!show)}>
                     {show ? (
@@ -58,7 +59,7 @@ const KPTextInput = ({
                     ) : (
                         <Image source={require("../images/invisible.png")} style={styles.iconStyle} />
                     )}
-                </TouchableOpacity>
+                </Pressable>
             ) : null}
             {isShowLabel && <Text
                 style={[styles.placeholderText, customlabelStyle, { backgroundColor: labelBackgroundColor, color: labelTextColor }]}>
@@ -69,4 +70,5 @@ const KPTextInput = ({
 }
 
 export default KPTextInput;
+
 

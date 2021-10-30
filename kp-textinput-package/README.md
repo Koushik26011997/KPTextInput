@@ -11,16 +11,23 @@ Features
 
 
 ![Image1](https://raw.githubusercontent.com/Koushik26011997/KPTextInput/koushik/kp-textinput-package/images/image1.png)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-![Image2](https://raw.githubusercontent.com/Koushik26011997/KPTextInput/koushik/kp-textinput-package/images/image2.png)
 
 
-### Installation
-``npm i @iamkoushik/kp-textinput --save``
+## Getting started
+Install the library using either Yarn:
 
-or
 
-``yarn add npm i @iamkoushik/kp-textinput``
+```
+npm i @iamkoushik/kp-textinput
+```
+
+or yarn:
+
+
+```
+yarn add @iamkoushik/kp-textinput
+```
+
 
 ### Usage
 ```javascript
@@ -56,7 +63,10 @@ const [value, setValue] = useState('');
           />
 
           <KPTextInput
-            textboxStyle={{ height: 48, fontSize: 14, marginTop: 12 }}
+            labelBackgroundColor="red"
+            customlabelStyle={{ borderRadius: 3, padding: 2 }}
+            labelTextColor="#fff"
+            textboxStyle={{ height: 48, fontSize: 15, marginTop: 12, fontWeight: 'bold' }}
             placeholder="Password"
             textboxvalue={value}
             type={"email-address"}
@@ -65,7 +75,7 @@ const [value, setValue] = useState('');
             keyboardType={"default"}
             showPassword={true}
             labelplaceholder="Password"
-          />
+      />
     </View>
   )
 }
